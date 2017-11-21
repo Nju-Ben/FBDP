@@ -1,0 +1,4 @@
+bin/hadoop jar kmeans.jar 4 5 /input/kmeans/Instance3.txt /output/kmeans3
+bin/hdfs dfs -put input/Instance3.txt /input/kmeans
+bin/hadoop jar kmeans.jar 4 5 /input/kmeans/Instance3.txt /output/kmeans3
+bin/hdfs dfs -get  /output/kmeans3/clusteredInstances/part-m-00000 output1
