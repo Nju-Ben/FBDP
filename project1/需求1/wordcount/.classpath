@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="/home/huben/hadoop_installs/hadoop-2.7.4/share/hadoop"/>
+	<classpathentry kind="lib" path="/home/huben/hadoop_installs/hadoop-2.7.4/share/hadoop/common/hadoop-common-2.7.4.jar"/>
+	<classpathentry kind="lib" path="/home/huben/hadoop_installs/hadoop-2.7.4/share/hadoop/common/hadoop-nfs-2.7.4.jar"/>
+	<classpathentry kind="lib" path="/home/huben/hadoop_installs/hadoop-2.7.4/share/hadoop/common/hadoop-common-2.7.4-tests.jar"/>
+	<classpathentry kind="lib" path="/home/huben/hadoop_installs/hadoop-2.7.4/share/hadoop/hdfs/hadoop-hdfs-2.7.4.jar"/>
+	<classpathentry kind="lib" path="/home/huben/hadoop_installs/hadoop-2.7.4/share/hadoop/hdfs/hadoop-hdfs-nfs-2.7.4.jar"/>
+	<classpathentry kind="lib" path="/home/huben/hadoop_installs/hadoop-2.7.4/share/hadoop/hdfs/hadoop-hdfs-2.7.4-tests.jar"/>
+	<classpathentry kind="lib" path="/home/huben/hadoop_installs/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar" sourcepath="/home/huben/hadoop_installs/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar"/>
+	<classpathentry kind="lib" path="/home/huben/hadoop_installs/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-client-common-2.7.4.jar"/>
+	<classpathentry kind="lib" path="/home/huben/hadoop_installs/hadoop-2.7.4/share/hadoop/mapreduce/hadoop-mapreduce-client-core-2.7.4.jar"/>
+	<classpathentry kind="lib" path="/home/huben/hadoop_installs/hadoop-2.7.4/share/hadoop/common/lib/commons-cli-1.2.jar"/>
+	<classpathentry kind="lib" path="/home/huben/project1/dist/IKAnalyzer2012_FF.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
