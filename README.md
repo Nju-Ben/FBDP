@@ -8,6 +8,8 @@
 该目录下放需求2相关文档及代码，其中invertedindex文件下为工程文件,fulldata.txt是输入数据，project1-需求2.md是实验报告
 ,还有一个输出结果
 
+2017/11/26
+
 ## 实验五 readme
 ### src
  该目录下存放java源代码文件
