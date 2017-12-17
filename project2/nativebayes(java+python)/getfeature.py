@@ -1,18 +1,3 @@
-
-
-#df1=pd.read_csv('G:\\positiveword.csv',engine='python')
-
-# with open ("G:/positiveword.txt", 'r', encoding= 'utf-8' ,errors="ignore") as file:
-#     positive=file.read()
-# file.close()
-# 
-# with open ("G:/neutralword.txt", 'r', encoding= 'utf-8' ,errors="ignore") as file:
-#     neutral=file.read()
-# file.close()
-# 
-# with open ("G:/negativeword.txt", 'r', encoding= 'utf-8' ,errors="ignore") as file:
-#     negative=file.read()
-# file.close()
 import pandas as pd
 from pandas.core.frame import DataFrame
 import re
@@ -49,9 +34,6 @@ with open ("G:/positive1.txt", 'r', encoding= 'utf-8' ,errors="ignore") as file:
     while 1:
         line = file.readline()
         temp= re.split('\t|\n',line)
-       # print(temp)
-        #temp=line.split('\t|\n');
-        #print(temp)
         if len(temp)>1 and temp[1] in featureword:
            # data[data['word']==temp[1]].iloc[0,2]=temp[0]
             index = data[data.word==temp[1]].index
@@ -65,9 +47,6 @@ with open ("G:/neutral1.txt", 'r', encoding= 'utf-8' ,errors="ignore") as file:
     while 1:
         line = file.readline()
         temp= re.split('\t|\n',line)
-       # print(temp)
-        #temp=line.split('\t|\n');
-        #print(temp)
         if len(temp)>1 and temp[1] in featureword:
            # data[data['word']==temp[1]].iloc[0,2]=temp[0]
             index = data[data.word==temp[1]].index
@@ -81,9 +60,6 @@ with open ("G:/negative1.txt", 'r', encoding= 'utf-8' ,errors="ignore") as file:
     while 1:
         line = file.readline()
         temp= re.split('\t|\n',line)
-       # print(temp)
-        #temp=line.split('\t|\n');
-        #print(temp)
         if len(temp)>1 and temp[1] in featureword:
            # data[data['word']==temp[1]].iloc[0,2]=temp[0]
             index = data[data.word==temp[1]].index
@@ -93,12 +69,12 @@ with open ("G:/negative1.txt", 'r', encoding= 'utf-8' ,errors="ignore") as file:
         pass
 file.close()
 
-sum1=data['positivenum'].sum()
-sum2=data['neutralnum'].sum()
-sum3=data['negativenum'].sum()
-data['positivenum']=data['positivenum']/sum1
-data['neutralnum']=data['neutralnum']/sum2
-sum3=data['negativenum']=sum3=data['negativenum']/sum3
+# sum1=data['positivenum'].sum()
+# sum2=data['neutralnum'].sum()
+# sum3=data['negativenum'].sum()
+# data['positivenum']=data['positivenum']/sum1
+# data['neutralnum']=data['neutralnum']/sum2
+# sum3=data['negativenum']=sum3=data['negativenum']/sum3
 
 print(data)
 file = open('G://feature.txt','a')
@@ -109,13 +85,3 @@ for i in range(0,783):
     file.write(repr(data.iloc[i,3])+'\t')
     file.write(repr(data.iloc[i,4])+'\n')
 file.close()
-#print(positive)
-#print(num)
-
-
-
-#print(data[5])
-#print(data[6])
-#print(data)
-#cut = jieba.cut(data)
-#data = dict(Counter(cut))
