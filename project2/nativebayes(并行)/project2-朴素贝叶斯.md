@@ -59,6 +59,9 @@ neutral.txt neutral1.txt
 
 #### step5.测试集预处理
 将公司的所有新闻标题进行合并。
+
+处理代码fulldataprocess.py
+
 输入:fulldata.txt
 
 ![](https://i.imgur.com/ljcMb8h.png)
@@ -67,9 +70,8 @@ neutral.txt neutral1.txt
 
 ![](https://i.imgur.com/gi5VFoP.png)
 
-处理代码fulldataprocess.py
 
-step6.测试集进行分类
+#### step6.测试集进行分类
 原理:将三类特征的特征向量数据存储在全局变量中，读取testdata.txt数据,并行处理时，对于每一个公司的新闻标题，扫描特征词，若特征词出现在标题中，则按三类，乘以其特征值，否则乘以某一调整后数值，这样能计算出三类特征的P(Yi|X),再乘以P（Yi），比较i=1,2,3,时P(Yi|X)*P（Yi）大小，最大的那个即为分类。
 处理代码 wordcount3.java及其项目
 
