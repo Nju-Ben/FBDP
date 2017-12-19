@@ -5,10 +5,10 @@
 
 实验目标:使用多种机器学习算法对文本进行情感判别，包括KNN、决策树、朴素贝叶斯、支持向量机等，学习如何进行模型训练，如何进行分类预测。
 ### 1 实验设计说明
-1.1 设计思路：训练集训练和测试集预测两部分利用mapreduce完成，中间部分数据处理利用python完成的部分
+1.1 设计思路：训练集训练和测试集预测两部分利用mapreduce完成，中间部分数据处理利用python完成
 
 1.2 流程说明
-####step1 将traindata中positive,neutral,negative三个文件夹下的txt分别合并，并且只保留新闻内容，形成positive.txt,neutral.txt,negative.txt三个文本文档。合并前的txt内容是新的文件中的一行。
+#### step1 将traindata中positive,neutral,negative三个文件夹下的txt分别合并，并且只保留新闻内容，形成positive.txt,neutral.txt,negative.txt三个文本文档。合并前的txt内容是新的文件中的一行。
 
 处理代码:trainingdataprocess.py
 
@@ -25,7 +25,7 @@
 
 
 
-####step2、将第一步得到的三个分类下的文档进行分词，统计词频(词频用于计算特征值)。
+#### step2、将第一步得到的三个分类下的文档进行分词，统计词频(词频用于计算特征值)。
 处理代码:wordcount2.java及其项目
 
 输入:positive.txt,neutral.txt,negative.txt（图片同上）
@@ -35,7 +35,7 @@
 ![](https://i.imgur.com/vw0tn1s.png)
 （该图片展示为negative1.txt）
 
-step3.卡方检验挑选特征词，卡方=(AD-BC)^2/((A+B)*(C+D))，其中A为积极文件夹中包含该词的txt数目，B为其他两个文件夹中包含该词的txt数目，C为积极文件夹中不包含该词的txt数目，D为其他两个文件夹中不包含该词的txt数目，计算出卡方后，按卡方大小进行排序，每个分类凑够1000词，然后去重，剩下约670词。
+#### step3.卡方检验挑选特征词，卡方=(AD-BC)^2/((A+B)*(C+D))，其中A为积极文件夹中包含该词的txt数目，B为其他两个文件夹中包含该词的txt数目，C为积极文件夹中不包含该词的txt数目，D为其他两个文件夹中不包含该词的txt数目，计算出卡方后，按卡方大小进行排序，每个分类凑够1000词，然后去重，剩下约670词。
 处理代码:chisquaretest.py
 
 输入:
@@ -48,7 +48,7 @@ neutral.txt neutral1.txt
 ![](https://i.imgur.com/wPh1vxC.png)
 
 
-step4.计算特征向量(基于词频):每一类特征上的值为该分类下特征词除以总词数，将所有频数为0的词初始化为1，防止乘数为0的情况，同时为避免数据过小无法读出结果，对每一个词频进行乘1000调整。
+#### step4.计算特征向量(基于词频):每一类特征上的值为该分类下特征词除以总词数，将所有频数为0的词初始化为1，防止乘数为0的情况，同时为避免数据过小无法读出结果，对每一个词频进行乘1000调整。
 
 处理代码:featureprocess.txt
 
@@ -57,7 +57,7 @@ step4.计算特征向量(基于词频):每一类特征上的值为该分类下�
 
 ![](https://i.imgur.com/UbwVsHe.png)
 
-step5.测试集预处理
+#### step5.测试集预处理
 将公司的所有新闻标题进行合并。
 输入:fulldata.txt
 
