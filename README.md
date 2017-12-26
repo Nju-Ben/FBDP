@@ -1,5 +1,19 @@
 # FBDP
  该仓库是为151099044 胡犇提交《金融大数据处理技术》建立，所有实验的相关说明将在此readme文件中更新。
+## 实验9 readme
+### 实验9.md
+该文件为实验说明
+### split.py
+该文件为pyspark程序
+2012/12/26
+
+## project2 readme
+### naivebayes 串行
+文件夹下有代码及说明
+### naivebayes 并行
+文件夹下有代码及说明
+### 正在努力用spark补充project2实现
+2012/12/16
 
 ## 实验7 readme
 ### 实验7.md
